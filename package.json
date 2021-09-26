@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@iconscout/unicons": "^4.0.0",
+    "feather-icons": "^4.28.0",
+    "ionicons": "^5.5.3"
+  },
+  "scripts": {
+    "build": "node build.js"
+  }
+}
