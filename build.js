@@ -2,20 +2,31 @@
 
 const fs = require("fs");
 const feather = require("feather-icons");
-
 const sets = require("./icon-sets.json");
 
 let icons = [],
   replacers = [];
 
-for (var id in sets) {
-  icons = [];
-  replacers = [];
+let args = process.argv.slice(2);
+
+if (args.length) {
+  const id = args[0];
   const set = sets[id];
+
   writeSprite(id, set);
   writeInitializer(set);
   writeAbout(set);
   console.log(`${set.name} updated!`);
+} else {
+  for (var id in sets) {
+    icons = [];
+    replacers = [];
+    const set = sets[id];
+    writeSprite(id, set);
+    writeInitializer(set);
+    writeAbout(set);
+    console.log(`${set.name} updated!`);
+  }
 }
 
 function writeSprite(id, set) {
@@ -25,21 +36,21 @@ function writeSprite(id, set) {
     for (const discourseIconId in setMappings) {
       const iconId = setMappings[discourseIconId];
       const prefix = `${set.prefix}-`;
-      let svg = "";
+      let svg = _getSvg(id, iconId, set);
 
-      if (iconId !== "TODO") {
+      if (svg !== "") {
         svg = `
     <symbol id="${prefix}${iconId}">
       ${_getSvg(id, iconId, set)}
     </symbol>`;
       } else {
-        console.log(`${discourseIconId} is marked as TODO.`);
+        console.log(`Match missing in ${id}: ${discourseIconId} => ${iconId} `);
       }
 
       if (!icons.includes(svg)) {
         icons.push(svg);
       }
-      if (iconId !== "TODO") {
+      if (svg !== "") {
         replacers.push(
           `api.replaceIcon("${discourseIconId}", "${prefix}${iconId}");`
         );
@@ -123,19 +134,20 @@ function writeAbout(set) {
 function _getSvg(setId, iconId, setMetadata) {
   let svg = "";
 
+  if (setMetadata["icon-suffix"]) {
+    iconId = `${iconId}-${setMetadata["icon-suffix"]}`;
+  }
+
   switch (setId) {
     case "feather":
       svg = feather.icons[iconId].toSvg();
       svg = svg.replace('width="24" ', "");
       svg = svg.replace('height="24" ', "");
       break;
-
     default:
       try {
         svg = fs.readFileSync(`${setMetadata.icons}/${iconId}.svg`, "utf8");
-      } catch (err) {
-        console.error(err);
-      }
+      } catch (err) {}
       break;
   }
 

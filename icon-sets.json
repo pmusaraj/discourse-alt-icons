@@ -11,5 +11,13 @@
     "mappings": "mappings/unicons.json",
     "prefix": "un",
     "icons": "node_modules/@iconscout/unicons/svg/line"
+  },
+  "phosphor-duotone": {
+    "name": "phosphor-duotone",
+    "description": "Phosphor Duotone icons for Discourse",
+    "mappings": "mappings/phosphor-duotone.json",
+    "prefix": "ph-dt",
+    "icons": "node_modules/phosphor-icons/assets/duotone",
+    "icon-suffix": "duotone"
   }
 }

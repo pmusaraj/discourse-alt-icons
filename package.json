@@ -2,7 +2,8 @@
   "dependencies": {
     "@iconscout/unicons": "^4.0.0",
     "feather-icons": "^4.28.0",
-    "ionicons": "^5.5.3"
+    "ionicons": "^5.5.3",
+    "phosphor-icons": "https://github.com/phosphor-icons/phosphor-icons"
   },
   "scripts": {
     "build": "node build.js"
