@@ -1,0 +1,15 @@
+{
+  "feather": {
+    "name": "feather-icons",
+    "description": "Feather icons for Discourse",
+    "mappings": "mappings/feather.json",
+    "prefix": "ft"
+  },
+  "unicons": {
+    "name": "unicons",
+    "description": "Unicons for Discourse",
+    "mappings": "mappings/unicons.json",
+    "prefix": "un",
+    "icons": "node_modules/@iconscout/unicons/svg/line"
+  }
+}
