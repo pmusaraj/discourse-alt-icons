@@ -1,6 +1,12 @@
 # discourse-alt-icons
 
-This is a utility repository that generates theme commponents for Discourse.
+This is a utility repository to generate theme components that replace Discourse's default icon set (FontAwesome). Currently this repo supports using the following icon sets: 
+
+- https://github.com/phosphor-icons/phosphor-icons
+- https://github.com/Iconscout/unicons
+- https://github.com/feathericons/feather
+
+Each icon set is provided as a separate repo, each included here as a submodule. 
 
 ## Setup
 
