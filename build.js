@@ -3,6 +3,7 @@
 const fs = require("fs");
 const feather = require("feather-icons");
 const sets = require("./icon-sets.json");
+const { parse, stringify } = require("svgson");
 
 let icons = [],
   replacers = [];
@@ -13,53 +14,49 @@ if (args.length) {
   const id = args[0];
   const set = sets[id];
 
-  writeSprite(id, set);
-  writeInitializer(set);
-  writeAbout(set);
-  console.log(`${set.name} updated!`);
+  init(id, set);
 } else {
   for (var id in sets) {
     icons = [];
     replacers = [];
     const set = sets[id];
-    writeSprite(id, set);
-    writeInitializer(set);
-    writeAbout(set);
-    console.log(`${set.name} updated!`);
+    init(id, set);
   }
 }
 
-function writeSprite(id, set) {
+async function init(id, set) {
+  writeAbout(set);
+  await writeSprite(id, set);
+  await writeInitializer(set);
+  await console.log(`${set.name} updated!`);
+}
+
+async function writeSprite(id, set) {
   try {
     const setMappings = JSON.parse(fs.readFileSync(set.mappings));
 
     for (const discourseIconId in setMappings) {
       const iconId = setMappings[discourseIconId];
       const prefix = `${set.prefix}-`;
-      let svg = _getSvg(id, iconId, set);
+      let svg = await _getSvg(id, iconId, set);
 
       if (svg !== "") {
-        svg = `
-    <symbol id="${prefix}${iconId}">
-      ${_getSvg(id, iconId, set)}
-    </symbol>`;
+        if (!icons.includes(svg)) {
+          icons.push(svg);
+        }
+        if (svg !== "") {
+          replacers.push(
+            `api.replaceIcon("${discourseIconId}", "${prefix}${iconId}");`
+          );
+        }
       } else {
         console.log(`Match missing in ${id}: ${discourseIconId} => ${iconId} `);
-      }
-
-      if (!icons.includes(svg)) {
-        icons.push(svg);
-      }
-      if (svg !== "") {
-        replacers.push(
-          `api.replaceIcon("${discourseIconId}", "${prefix}${iconId}");`
-        );
       }
     }
 
     const sprite = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  ${icons.join("\n")}
+  ${icons.join("\n  ")}
 </svg>
 `;
 
@@ -131,25 +128,40 @@ function writeAbout(set) {
   );
 }
 
-function _getSvg(setId, iconId, setMetadata) {
+async function _getSvg(setId, iconId, setMetadata) {
   let svg = "";
 
-  if (setMetadata["icon-suffix"]) {
-    iconId = `${iconId}-${setMetadata["icon-suffix"]}`;
-  }
+  const iconFilename = setMetadata["icon-suffix"]
+    ? `${iconId}-${setMetadata["icon-suffix"]}`
+    : iconId;
 
   switch (setId) {
     case "feather":
-      svg = feather.icons[iconId].toSvg();
+      svg = feather.icons[iconFilename].toSvg();
       svg = svg.replace('width="24" ', "");
       svg = svg.replace('height="24" ', "");
       break;
     default:
       try {
-        svg = fs.readFileSync(`${setMetadata.icons}/${iconId}.svg`, "utf8");
+        svg = fs.readFileSync(
+          `${setMetadata.icons}/${iconFilename}.svg`,
+          "utf8"
+        );
       } catch (err) {}
       break;
   }
 
-  return svg;
+  return parse(svg).then((sObj) => {
+    sObj.attributes["id"] = `${setMetadata.prefix}-${iconId}`;
+    // sObj.attributes["class"] = `${setMetadata.prefix}-icon`;
+
+    delete sObj.attributes["xmlns"];
+    delete sObj.attributes["data-name"];
+
+    if (sObj.name == "svg") {
+      sObj.name = "symbol";
+    }
+
+    return stringify(sObj);
+  });
 }
