@@ -1,9 +1,9 @@
 [submodule "repos/discourse-unicons"]
 	path = repos/discourse-unicons
-	url = https://github.com/discourse/discourse-unicons
+	url = git@github.com:discourse/discourse-unicons.git
 [submodule "repos/discourse-feather-icons"]
 	path = repos/discourse-feather-icons
-	url = https://github.com/discourse/discourse-feather-icons
+	url = git@github.com:discourse/discourse-feather-icons.git
 [submodule "repos/discourse-phosphor-duotone-icons"]
 	path = repos/discourse-phosphor-duotone-icons
-	url = https://github.com/discourse/discourse-phosphor-duotone-icons
+	url = git@github.com:discourse/discourse-phosphor-duotone-icons.git
