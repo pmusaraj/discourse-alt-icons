@@ -2,9 +2,9 @@
 
 This is a utility repository to generate theme components that replace Discourse's default icon set (FontAwesome). Currently this repo supports using the following icon sets:
 
-- https://github.com/feathericons/feather
-- https://github.com/phosphor-icons/phosphor-icons
-- https://github.com/Iconscout/unicons
+- Feather icons (https://feathericons.com/)
+- Phosphor duotone icons (https://phosphoricons.com, the duotone set)
+- Unicons (https://iconscout.com/unicons, the line set)
 
 Each icon set is provided as a separate repo:
 
