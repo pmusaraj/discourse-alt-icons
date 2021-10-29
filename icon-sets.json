@@ -5,6 +5,13 @@
     "mappings": "mappings/feather.json",
     "prefix": "ft"
   },
+  "heroicons": {
+    "name": "heroicons",
+    "description": "Heroicons for Discourse",
+    "mappings": "mappings/heroicons.json",
+    "prefix": "hr",
+    "icons": "node_modules/heroicons/solid"
+  },
   "unicons": {
     "name": "unicons",
     "description": "Unicons for Discourse",

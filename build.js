@@ -142,6 +142,8 @@ async function _getSvg(setId, iconId, setMetadata) {
       svg = svg.replace('height="24" ', "");
       break;
     default:
+      // If there is a missing icon error, uncomment line below to debug
+      // console.log(iconFilename);
       try {
         svg = fs.readFileSync(
           `${setMetadata.icons}/${iconFilename}.svg`,

@@ -7,3 +7,6 @@
 [submodule "repos/discourse-phosphor-duotone-icons"]
 	path = repos/discourse-phosphor-duotone-icons
 	url = git@github.com:discourse/discourse-phosphor-duotone-icons.git
+[submodule "repos/discourse-heroicons"]
+	path = repos/discourse-heroicons
+	url = git@github.com:discourse/discourse-heroicons.git
