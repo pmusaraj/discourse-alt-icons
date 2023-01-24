@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@iconscout/unicons@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@iconscout/unicons/-/unicons-4.0.0.tgz#ac98c225e409eac558ae72318e68d35b0dc43dab"
-  integrity sha512-kuaQzvqIed+aTq3GuBum/LqeJVF/iavfyUYMw8Y3dwkXwgogaqgCqO3iEH5NokJub4/pTX1Mx0Kwa4xVBN+Ggg==
+"@iconscout/unicons@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@iconscout/unicons/-/unicons-4.0.1.tgz#f38fda4b83a1357a650135959f246913a157f6af"
+  integrity sha512-uMyaHfzfrc4Wd+n0EGsrSGqW/YB/7gZYro4fKhK+YjrG5GWn2bag+5Fj2yqnhjj0Wdc3nHQM6i6rjM7B5zNY3Q==
   dependencies:
     async "^2.6.1"
     axios "^0.21.1"
@@ -14,6 +14,7 @@
     fontello-cli "^0.6.2"
     fs-plus "^3.1.1"
     glob "^7.1.3"
+    insertion-query "^1.1.0"
     lodash "^4.17.21"
     parse-svg-path "^0.1.2"
     scale-svg-path "0.0.1"
@@ -52,9 +53,9 @@ async@^1.5.2:
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
 
 async@^2.6.1:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
     lodash "^4.17.14"
 
@@ -683,6 +684,11 @@ inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+
+insertion-query@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/insertion-query/-/insertion-query-1.1.0.tgz#25c98db5acdc8e012a1bc2ae8f617a8edf82ed5d"
+  integrity sha512-5HZCK1xmD+Cm5q9/Qk1S8tr2BqHtcvseGsg7LKD3WlHRg4OOCl7d6C5raGNXAhfV4NlUcHmAtdJt0b3vJPEuiA==
 
 internal-slot@^1.0.3:
   version "1.0.3"

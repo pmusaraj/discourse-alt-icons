@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@iconscout/unicons": "^4.0.0",
+    "@iconscout/unicons": "^4.0.1",
     "fast-xml-parser": "^3.20.3",
     "feather-icons": "^4.28.0",
     "heroicons": "^1.0.5",
