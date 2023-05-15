@@ -10,7 +10,7 @@
     "description": "Heroicons for Discourse",
     "mappings": "mappings/heroicons.json",
     "prefix": "hr",
-    "icons": "node_modules/heroicons/solid"
+    "icons": "node_modules/heroicons1/solid"
   },
   "unicons": {
     "name": "unicons",
@@ -26,5 +26,12 @@
     "prefix": "ph-dt",
     "icons": "node_modules/phosphor-icons/assets/duotone",
     "icon-suffix": "duotone"
+  },
+  "heroicons-outline": {
+    "name": "heroicons-outline",
+    "description": "Heroicons2 outline icons for Discourse",
+    "mappings": "mappings/heroicons-outline.json",
+    "prefix": "hr",
+    "icons": "node_modules/heroicons/24/outline"
   }
 }

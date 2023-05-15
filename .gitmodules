@@ -10,3 +10,6 @@
 [submodule "repos/discourse-heroicons"]
 	path = repos/discourse-heroicons
 	url = git@github.com:discourse/discourse-heroicons.git
+[submodule "repos/discourse-heroicons-outline"]
+	path = repos/discourse-heroicons-outline
+	url = git@github.com:discourse/discourse-heroicons-outline.git
