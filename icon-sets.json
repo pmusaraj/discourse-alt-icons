@@ -24,7 +24,7 @@
     "description": "Phosphor Duotone icons for Discourse",
     "mappings": "mappings/phosphor-duotone.json",
     "prefix": "ph-dt",
-    "icons": "node_modules/phosphor-icons/assets/duotone",
+    "icons": "node_modules/@phosphor-icons/core/assets/duotone",
     "icon-suffix": "duotone"
   },
   "heroicons-outline": {

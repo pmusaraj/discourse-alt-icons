@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "@phosphor-icons/core": "^2.0.2",
     "@iconscout/unicons": "^4.0.1",
     "fast-xml-parser": "^3.20.3",
     "feather-icons": "^4.28.0",
     "heroicons1": "npm:heroicons@1.0.6",
     "ionicons": "^5.5.3",
-    "phosphor-icons": "https://github.com/phosphor-icons/phosphor-icons",
     "heroicons": "^2.0.18",
     "svgson": "^5.2.1"
   },
