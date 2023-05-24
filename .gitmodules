@@ -12,4 +12,7 @@
 	url = git@github.com:discourse/discourse-heroicons.git
 [submodule "repos/discourse-heroicons-outline"]
 	path = repos/discourse-heroicons-outline
-	url = https://github.com/discourse/discourse-heroicons-outline
+	url = git@github.com:discourse/discourse-heroicons-outline.git
+[submodule "repos/discourse-material-design-icons-filled"]
+	path = repos/discourse-material-design-icons-filled
+	url = git@github.com:discourse/discourse-material-design-icons-filled.git

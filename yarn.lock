@@ -23,6 +23,11 @@
     svgstore "^3.0.0-2"
     uuid "^3.3.2"
 
+"@material-design-icons/svg@^0.14.7":
+  version "0.14.7"
+  resolved "https://registry.yarnpkg.com/@material-design-icons/svg/-/svg-0.14.7.tgz#8142aba3926fd998fb7da9eaa8ab961f780b80f9"
+  integrity sha512-r3mDjzAJ1EsErok8c2wMPmeGnjX2iF+RgvvbP/5OdZrygszE77syTy9XdcRtfU2f0b0iQ24lXE76F8xmkq0y6w==
+
 "@phosphor-icons/core@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@phosphor-icons/core/-/core-2.0.2.tgz#108c0e5d798bcb76951ae8d0a61987cd549ac949"

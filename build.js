@@ -37,6 +37,10 @@ async function writeSprite(id, set) {
 
     for (const discourseIconId in setMappings) {
       const iconId = setMappings[discourseIconId];
+      if (!iconId) {
+        // console.log(`skipping ${discourseIconId} (empty mapping)`);
+        continue;
+      }
       const prefix = `${set.prefix}-`;
       let svg = await _getSvg(id, iconId, set);
 
@@ -143,13 +147,18 @@ async function _getSvg(setId, iconId, setMetadata) {
       break;
     default:
       // If there is a missing icon error, uncomment line below to debug
-      // console.log(iconFilename);
+      console.log(iconFilename);
       try {
         svg = fs.readFileSync(
           `${setMetadata.icons}/${iconFilename}.svg`,
           "utf8"
         );
       } catch (err) {}
+
+      if (setId == "material-design-icons-filled") {
+        svg = svg.replace('width="24" ', "");
+        svg = svg.replace('height="24" ', "");
+      }
       break;
   }
 
