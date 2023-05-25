@@ -7,6 +7,7 @@ This is a utility repository to generate theme components that replace Discourse
 - Heroicons (https://heroicons.dev, outline set, v2)
 - Phosphor duotone icons (https://phosphoricons.com, the duotone set)
 - Unicons (https://iconscout.com/unicons, the line set)
+- Material Design icons (https://github.com/marella/material-design-icons, filled and outlined)
 
 Each icon set is provided as a separate repo:
 
@@ -15,6 +16,8 @@ Each icon set is provided as a separate repo:
 - https://github.com/discourse/discourse-heroicons-outline
 - https://github.com/discourse/discourse-phosphor-duotone-icons
 - https://github.com/discourse/discourse-unicons
+- https://github.com/discourse/discourse-material-design-icons-filled
+- https://github.com/discourse/discourse-material-design-icons-outlined
 
 ## Dev Setup
 
@@ -54,26 +57,24 @@ The list of the currently supported icon libraries is in the `icon-sets.json` fi
 
 ### To add a new mapping
 
-Take one of the existing sets, say, `discourse-feather-icons` and install the component in your local instance. Head over to `/styleguide/atoms/icons` to preview the icons.
+Multiple steps are needed:
 
-You should see some icons there from Feather Icons, and some still using FontAwesome. If you find an equivalent, you can add it to the `mappings/feather.json` set. For example:
+- add a new entry to `icon-sets.json`
+- create a new file under `mappings` (you can copy/paste the `template.json` as an example)
+- create a new blank repo, for example, at `discourse/discourse-sample-icons`
+- add empty files under `assets/`, `javascripts/` and `LICENSE`
+- add that repo as a submodule via `git submodule add git@github.com:discourse/discourse-sample-icons.git repos/discourse-sample-icons`
 
-```
-  "cog": "settings",
-```
-
-(The key in that JSON file refers to the Discourse icon name, the value refers to the selected icon set, i.e. Feather in this case.)
-
-To test your changes, you can use the provided build script to generate the icons:
+Start filling in the mappings for your new set. You can built it using
 
 ```
-yarn build feather
+yarn build discourse-sample-icons
 ```
 
-That should update your feather icon set component, and if you are using `discourse_theme watch ...`, it should immediately update the component in your instance, too.
+That should update the icon set component under `repos/discourse-sample-icons`. You can then use `discourse_theme watch discourse-sample-icons` to see updates in your local instance under the Styleguide > Icons screen.
 
-If that all works correctly, feel free to post your changes to the mappings file as a pull request.
+If that all works correctly, you can post your changes as a pull request, both for `discourse-alt-icons` and as the new repo (submodule).
 
-### To add a new icon set
+### More
 
-Feel free to propose a new set via Pull Requests or by posting to https://meta.discourse.org/t/alternative-icons/206693.
+You can also propose using a new set by posting to https://meta.discourse.org/t/alternative-icons/206693.

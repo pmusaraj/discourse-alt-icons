@@ -36,9 +36,17 @@
   },
   "material-design-icons-filled": {
     "name": "material-design-icons-filled",
-    "description": "Material Design icons for Discourse",
+    "description": "Material Design filled icons for Discourse",
     "mappings": "mappings/material-design-icons-filled.json",
     "prefix": "mdf",
     "icons": "node_modules/@material-design-icons/svg/filled"
+  },
+  "material-design-icons-outlined": {
+    "name": "material-design-icons-outlined",
+    "description": "Material Design outlined icons for Discourse",
+    "mappings": "mappings/material-design-icons-outlined.json",
+    "prefix": "mdo",
+    "icons": "node_modules/@material-design-icons/svg/outlined"
   }
+
 }

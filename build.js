@@ -155,7 +155,10 @@ async function _getSvg(setId, iconId, setMetadata) {
         );
       } catch (err) {}
 
-      if (setId == "material-design-icons-filled") {
+      if (
+        setId === "material-design-icons-filled" ||
+        setId === "material-design-icons-outlined"
+      ) {
         svg = svg.replace('width="24" ', "");
         svg = svg.replace('height="24" ', "");
       }
