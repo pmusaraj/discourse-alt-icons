@@ -3,7 +3,7 @@
     "@iconscout/unicons": "^4.0.1",
     "@material-design-icons/svg": "^0.14.7",
     "@phosphor-icons/core": "^2.0.2",
-    "fast-xml-parser": "^4.2.4",
+    "fast-xml-parser": "^4.2.5",
     "feather-icons": "^4.28.0",
     "heroicons": "^2.0.18",
     "heroicons1": "npm:heroicons@1.0.6",
