@@ -47,6 +47,12 @@
     "mappings": "mappings/material-design-icons-outlined.json",
     "prefix": "mdo",
     "icons": "node_modules/@material-design-icons/svg/outlined"
+  },
+  "material-design-icons-rounded": {
+    "name": "material-design-icons-rounded",
+    "description": "Material Design rounded icons for Discourse",
+    "mappings": "mappings/material-design-icons-rounded.json",
+    "prefix": "mdr",
+    "icons": "node_modules/@material-design-icons/svg/round"
   }
-
 }

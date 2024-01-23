@@ -19,3 +19,6 @@
 [submodule "repos/discourse-material-design-icons-outlined"]
 	path = repos/discourse-material-design-icons-outlined
 	url = git@github.com:discourse/discourse-material-design-icons-outlined.git
+[submodule "repos/discourse-material-design-icons-rounded"]
+	path = repos/discourse-material-design-icons-rounded
+	url = git@github.com:discourse/discourse-material-design-icons-rounded.git

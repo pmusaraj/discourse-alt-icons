@@ -38,7 +38,13 @@ https://github.com/discourse/discourse_theme
 
 Use the discourse_theme gem to quickly try out changes to a theme component by pointing it to one of the repos in the submodule.
 
-For example, after you have made a change to mappings for, say, `feather-icons`, run `yarn build` and then try out the changes locally via:
+For example, after you have made a change to mappings for an icon set, say, `feather-icons`, run
+
+```
+yarn build feather-icons
+```
+
+and then try out the changes locally via:
 
 ```
 cd repos
@@ -65,7 +71,7 @@ Multiple steps are needed:
 - add empty files under `assets/`, `javascripts/` and `LICENSE`
 - add that repo as a submodule via `git submodule add git@github.com:discourse/discourse-sample-icons.git repos/discourse-sample-icons`
 
-Start filling in the mappings for your new set. You can built it using
+Start filling in the mappings for your new set and build via:
 
 ```
 yarn build discourse-sample-icons
