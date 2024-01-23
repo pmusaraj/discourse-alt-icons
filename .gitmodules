@@ -25,12 +25,6 @@
 [submodule "repos/discourse-material-design-icons-sharp"]
 	path = repos/discourse-material-design-icons-sharp
 	url = https://github.com/discourse/discourse-material-design-icons-sharp.git
-[submodule "rpos/discourse-material-design-icons-twotone"]
-	path = rpos/discourse-material-design-icons-twotone
-	url = git@github.com:discourse/discourse-material-design-icons-twotone.git
-[submodule "rwpos/discourse-material-design-icons-twotone"]
-	path = rwpos/discourse-material-design-icons-twotone
-	url = git@github.com:discourse/discourse-material-design-icons-twotone.git
 [submodule "repos/discourse-material-design-icons-twotone"]
 	path = repos/discourse-material-design-icons-twotone
 	url = git@github.com:discourse/discourse-material-design-icons-twotone.git

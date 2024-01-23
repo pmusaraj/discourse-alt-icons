@@ -154,7 +154,7 @@ async function _getSvg(setId, iconId, setMetadata) {
       if (
         setId === "material-design-icons-filled" ||
         setId === "material-design-icons-outlined" ||
-        setId === "material-design-icons-rounded" || 
+        setId === "material-design-icons-rounded" ||
         setId === "material-design-icons-sharp" ||
         setId === "material-design-icons-twotone"
       ) {
