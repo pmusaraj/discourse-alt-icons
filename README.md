@@ -71,7 +71,7 @@ Multiple steps are needed:
 - add empty files under `assets/`, `javascripts/` and `LICENSE`
 - add that repo as a submodule via `git submodule add git@github.com:discourse/discourse-sample-icons.git repos/discourse-sample-icons`
 
-Start filling in the mappings for your new set. You can built it using
+Start filling in the mappings for your new set and build via:
 
 ```
 yarn build discourse-sample-icons
