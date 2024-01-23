@@ -16,16 +16,13 @@ if (args.length) {
 
   init(id, set);
 } else {
-  for (var id in sets) {
-    icons = [];
-    replacers = [];
-    const set = sets[id];
-    init(id, set);
-  }
+  console.error(
+    "Error: please specify a set name, i.e. yarn build feather-icons"
+  );
 }
 
 async function init(id, set) {
-  writeAbout(set);
+  await writeAbout(set);
   await writeSprite(id, set);
   await writeInitializer(set);
   await console.log(`${set.name} updated!`);
@@ -34,7 +31,6 @@ async function init(id, set) {
 async function writeSprite(id, set) {
   try {
     const setMappings = JSON.parse(fs.readFileSync(set.mappings));
-
     for (const discourseIconId in setMappings) {
       const iconId = setMappings[discourseIconId];
       if (!iconId) {
@@ -147,7 +143,7 @@ async function _getSvg(setId, iconId, setMetadata) {
       break;
     default:
       // If there is a missing icon error, uncomment line below to debug
-      console.log(iconFilename);
+      // console.log(iconFilename);
       try {
         svg = fs.readFileSync(
           `${setMetadata.icons}/${iconFilename}.svg`,
@@ -157,7 +153,8 @@ async function _getSvg(setId, iconId, setMetadata) {
 
       if (
         setId === "material-design-icons-filled" ||
-        setId === "material-design-icons-outlined"
+        setId === "material-design-icons-outlined" ||
+        setId === "material-design-icons-rounded"
       ) {
         svg = svg.replace('width="24" ', "");
         svg = svg.replace('height="24" ', "");

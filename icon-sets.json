@@ -53,6 +53,6 @@
     "description": "Material Design rounded icons for Discourse",
     "mappings": "mappings/material-design-icons-rounded.json",
     "prefix": "mdr",
-    "icons": "node_modules/@material-design-icons/svg/rounded"
+    "icons": "node_modules/@material-design-icons/svg/round"
   }
 }
