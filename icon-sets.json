@@ -54,5 +54,19 @@
     "mappings": "mappings/material-design-icons-rounded.json",
     "prefix": "mdr",
     "icons": "node_modules/@material-design-icons/svg/round"
+  },
+  "material-design-icons-sharp": {
+    "name": "material-design-icons-sharp",
+    "description": "Material Design sharp icons for Discourse",
+    "mappings": "mappings/material-design-icons-sharp.json",
+    "prefix": "mds",
+    "icons": "node_modules/@material-design-icons/svg/sharp"
+  },
+  "material-design-icons-twotone": {
+    "name": "material-design-icons-twotone",
+    "description": "Material Design twotone icons for Discourse",
+    "mappings": "mappings/material-design-icons-twotone.json",
+    "prefix": "mdt",
+    "icons": "node_modules/@material-design-icons/svg/two-tone"
   }
 }
