@@ -22,3 +22,9 @@
 [submodule "repos/discourse-material-design-icons-rounded"]
 	path = repos/discourse-material-design-icons-rounded
 	url = git@github.com:discourse/discourse-material-design-icons-rounded.git
+[submodule "repos/discourse-material-design-icons-sharp"]
+	path = repos/discourse-material-design-icons-sharp
+	url = https://github.com/discourse/discourse-material-design-icons-sharp.git
+[submodule "repos/discourse-material-design-icons-twotone"]
+	path = repos/discourse-material-design-icons-twotone
+	url = git@github.com:discourse/discourse-material-design-icons-twotone.git
